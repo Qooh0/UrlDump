@@ -1,0 +1,25 @@
+{
+
+    "manifest_version": 2,
+    "name": "Url Dump",
+    "version": "2018.02.14",
+   
+    "description": "Tab's URL and Title dump",
+    
+    "icons": {
+      "48": "icons/icon-48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["urldump.js"]
+      }
+    ],
+    "permissions": [
+      "tabs"
+    ],
+    "background": {
+      "page": "./background.html"
+    }
+  }
